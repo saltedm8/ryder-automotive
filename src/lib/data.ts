@@ -131,6 +131,8 @@ export const SITE_CONFIG = {
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "441634712345",
   /** Formspree endpoint for form submissions. Create at formspree.io, add to .env: NEXT_PUBLIC_FORMSPREE_ENDPOINT */
   formEndpoint: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "",
+  /** Site base URL for sitemap/robots. Vercel sets VERCEL_URL. */
+  baseUrl: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://www.example.com",
   /** Previously sold archive */
   previouslySoldArchiveUrl: "",
   /** KOVE videos */
