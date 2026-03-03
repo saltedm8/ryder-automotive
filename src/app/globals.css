@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --gold: #d4900f;
+  --gold-light: #efc047;
+  --gold-dark: #8e530d;
+  --charcoal: #141414;
+  --charcoal-mid: #1e1e1e;
+  --charcoal-light: #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f0ece4;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-gold-gradient text-charcoal-950 font-semibold tracking-wider uppercase text-sm transition-all duration-300 hover:shadow-gold-lg hover:scale-105 active:scale-95;
+    font-family: var(--font-oswald);
+    letter-spacing: 0.1em;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    touch-action: manipulation;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-gold-600 text-gold-400 font-semibold tracking-wider uppercase text-sm transition-all duration-300 hover:bg-gold-600 hover:text-charcoal-950 hover:shadow-gold active:scale-95;
+    font-family: var(--font-oswald);
+    letter-spacing: 0.1em;
+    touch-action: manipulation;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-charcoal-300 font-medium text-sm transition-all duration-200 hover:text-gold-400;
+  }
+
+  .section-title {
+    font-family: var(--font-playfair);
+    @apply text-3xl md:text-4xl font-bold text-white;
+  }
+
+  .section-subtitle {
+    @apply text-gold-400 uppercase tracking-[0.25em] text-xs font-semibold;
+    font-family: var(--font-oswald);
+  }
+
+  .gold-divider {
+    @apply w-16 h-0.5 bg-gold-gradient my-4;
+  }
+
+  .card-dark {
+    @apply bg-charcoal-900 border border-charcoal-800 transition-all duration-300 hover:border-gold-700 hover:shadow-gold;
+  }
+
+  .input-dark {
+    @apply w-full bg-charcoal-900 border border-charcoal-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-gold-500 transition-colors placeholder-charcoal-500;
+  }
+
+  .select-dark {
+    @apply w-full bg-charcoal-900 border border-charcoal-700 text-white px-4 py-3 text-sm focus:outline-none focus:border-gold-500 appearance-none cursor-pointer min-h-[44px];
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    touch-action: manipulation;
+  }
+
+  /* details/summary - hide default marker in Firefox */
+  details summary {
+    list-style: none;
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .nav-link {
+    @apply text-charcoal-300 hover:text-gold-400 transition-colors duration-200 text-sm tracking-wide uppercase;
+    font-family: var(--font-oswald);
+    letter-spacing: 0.08em;
+    font-weight: 400;
+  }
+
+  .price-tag {
+    font-family: var(--font-playfair);
+    @apply text-gold-400 font-bold;
+  }
+
+  .stat-number {
+    font-family: var(--font-playfair);
+    @apply text-4xl font-bold text-white;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0d0d0d; }
+::-webkit-scrollbar-thumb { background: #3d3d3d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #d4900f; }
+
+/* Pin-stripe decorative line */
+.pin-stripe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(212, 144, 15, 0.03) 10px,
+    rgba(212, 144, 15, 0.03) 11px
+  );
+  pointer-events: none;
+}
+
+/* Gold shimmer */
+.gold-shimmer {
+  background: linear-gradient(90deg, #b3720b 0%, #efc047 30%, #f5da84 50%, #efc047 70%, #b3720b 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Corner accents */
+.corner-accent {
+  position: relative;
+}
+.corner-accent::before,
+.corner-accent::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: #d4900f;
+  border-style: solid;
+}
+.corner-accent::before {
+  top: -1px; left: -1px;
+  border-width: 2px 0 0 2px;
+}
+.corner-accent::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+/* Filter grid fade-in */
+@keyframes filter-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-card-enter {
+  opacity: 0;
+  animation: filter-fade-in 0.35s ease-out forwards;
+}
