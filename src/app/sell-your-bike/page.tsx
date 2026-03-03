@@ -8,7 +8,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Sell Your Bike",
   description:
-    "Sell your motorbike to Ryder Automotive. We buy bikes nationwide. Part exchange welcome. Cash or bank transfer. Free collection. Finance settlement available.",
+    `Sell your motorbike to ${SITE_CONFIG.name}. We buy bikes nationwide. Part exchange welcome. Cash or bank transfer. Free collection. Finance settlement available.`,
 };
 
 export default function SellYourBikePage() {
@@ -32,7 +32,7 @@ export default function SellYourBikePage() {
             <div className="space-y-6 text-charcoal-300 leading-relaxed">
               <h2 className="section-title text-2xl">We Buy Motorbikes of All Makes and Models</h2>
               <p>
-                Whether you&apos;re upgrading, downsizing, or simply moving on, Ryder Automotive is always in the market for quality used motorcycles. We buy outright or welcome your bike as part exchange against any bike in our stock.
+                Whether you&apos;re upgrading, downsizing, or simply moving on, {SITE_CONFIG.name} is always in the market for quality used motorcycles. We buy outright or welcome your bike as part exchange against any bike in our stock.
               </p>
               <p>
                 As a family-run dealer with over 500 bikes sold, we understand what riders want. We value honesty and transparency — you&apos;ll get a fair, no-pressure valuation and a straightforward sale.

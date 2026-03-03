@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Ryder Automotive in Sittingbourne, Kent. Unit 12, D2 Trading Estate, Castle Road, Eurolink. 01795 899204.",
+    `Contact ${SITE_CONFIG.name} in Sittingbourne, Kent. ${SITE_CONFIG.address.line1}, ${SITE_CONFIG.address.line2}. ${SITE_CONFIG.phone}.`,
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
     <>
       <PageHero
         subtitle="Get in Touch"
-        title="Contact Ryder Automotive"
+        title={`Contact ${SITE_CONFIG.name}`}
         description="Visit our showroom, give us a call, or send an email. We're here to help."
         breadcrumbs={[{ label: "Contact" }]}
         backgroundImage={(SITE_CONFIG.images as { about?: string[] }).about?.[0] ?? SITE_CONFIG.images.hero}
@@ -29,7 +29,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4 mb-6">
                   <MapPin size={20} className="text-gold-500 shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-white mb-1">Ryder Automotive</p>
+                    <p className="font-semibold text-white mb-1">{SITE_CONFIG.name}</p>
                     <p>{SITE_CONFIG.address.line1}</p>
                     <p>{SITE_CONFIG.address.line2}</p>
                     <p>{SITE_CONFIG.address.town}</p>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   <span className="font-semibold">{SITE_CONFIG.phone}</span>
                 </a>
                 <a
-                  href="mailto:info@ryderauto.co.uk"
+                  href={`mailto:${SITE_CONFIG.email}`}
                   className="flex items-center gap-4 text-gold-400 hover:text-gold-300 transition-colors"
                 >
                   <Mail size={20} />
@@ -80,7 +80,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ryder Automotive location"
+                  title={`${SITE_CONFIG.name} location`}
                   className="absolute inset-0 w-full h-full"
                 />
               </div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 Get Directions
               </a>
               <p className="text-charcoal-500 text-sm mt-4">
-                Unit 12, D2 Trading Estate, Castle Road, Eurolink, Sittingbourne, Kent, ME10 3RH
+                {SITE_CONFIG.address.line1}, {SITE_CONFIG.address.line2}, {SITE_CONFIG.address.town}, {SITE_CONFIG.address.county}, {SITE_CONFIG.address.postcode}
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Finance",
   description:
-    "Motorbike finance at Ryder Automotive. Hire Purchase, PCP. All types of credit accepted. Finance decisions in 60 seconds. Close Brothers Finance.",
+    `Motorbike finance at ${SITE_CONFIG.name}. Hire Purchase, PCP. All types of credit accepted. Finance decisions in 60 seconds. Close Brothers Finance.`,
 };
 
 export default function FinancePage() {
@@ -28,7 +28,7 @@ export default function FinancePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl space-y-6 text-charcoal-300 leading-relaxed">
             <p>
-              Ryder Automotive has a dedicated team of finance experts ready to help. We work with high street lenders and specialist motoring finance providers — including Close Brothers Motor Finance — to secure the best deal for your budget.
+              {SITE_CONFIG.name} has a dedicated team of finance experts ready to help. We work with high street lenders and specialist motoring finance providers — including Close Brothers Motor Finance — to secure the best deal for your budget.
             </p>
             <p>
               We&apos;ve helped hundreds of customers get on the road. Even if you have a poor credit rating or have been refused elsewhere, we may be able to help. All types of credit are considered, and we aim for a decision in 60 seconds when you call.

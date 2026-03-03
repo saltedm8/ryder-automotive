@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { SITE_CONFIG } from "@/lib/data";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -12,8 +13,8 @@ export const viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Ryder Automotive | Used Motorbikes for Sale in Sittingbourne, Kent",
-    template: "%s | Ryder Automotive",
+    default: `${SITE_CONFIG.name} | Used Motorbikes for Sale in Sittingbourne, Kent`,
+    template: `%s | ${SITE_CONFIG.name}`,
   },
   description:
     "Family-run motorcycle dealer in Sittingbourne, Kent. Specialist in used motorbikes, workshop servicing, MOTs, tyres and finance. Official KOVE dealer for the South East.",
@@ -24,11 +25,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://www.ryderauto.co.uk",
-    siteName: "Ryder Automotive",
+    url: "https://www.example.com",
+    siteName: SITE_CONFIG.name,
   },
   icons: {
-    icon: "/images/downthemall/logo.svg",
+    icon: SITE_CONFIG.logoIcon,
   },
 };
 

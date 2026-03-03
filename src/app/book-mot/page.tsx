@@ -8,7 +8,7 @@ import { SITE_CONFIG, SERVICE_PRICES } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Book MOT",
-  description: "Book your motorbike MOT at Ryder Automotive. MOTs from £29.65.",
+  description: `Book your motorbike MOT at ${SITE_CONFIG.name}. MOTs from £29.65.`,
 };
 
 export default function BookMotPage() {

@@ -38,7 +38,7 @@ const navItems = [
       { label: "Book MOT", href: "/book-mot" },
     ],
   },
-  { label: "Helmets & Gear", href: "https://rydermotorcycles.co.uk/", external: true },
+  { label: "Helmets & Gear", href: "#", external: true },
   {
     label: "Services",
     children: [
@@ -46,7 +46,7 @@ const navItems = [
       { label: "Part Exchange", href: "/part-exchange" },
       { label: "Finance", href: "/finance" },
       { label: "Delivery", href: "/delivery" },
-      { label: "Web Shop", href: "https://ryder-automotive.myshopify.com/", external: true },
+      { label: "Web Shop", href: "#", external: true },
       { label: "Rental Booking", href: "/rental-booking" },
     ],
   },
@@ -94,7 +94,7 @@ export default function Navbar() {
       <div className="bg-charcoal-950 border-b border-charcoal-800 text-xs hidden lg:block">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
           <span className="text-charcoal-400 tracking-wide">
-            Unit 12, D2 Trading Estate, Castle Road, Eurolink, Sittingbourne, Kent, ME10 3RH
+            {SITE_CONFIG.address.line1}, {SITE_CONFIG.address.line2}, {SITE_CONFIG.address.town}, {SITE_CONFIG.address.county}, {SITE_CONFIG.address.postcode}
           </span>
           <div className="flex items-center gap-6">
             <span className="text-charcoal-400">
@@ -123,12 +123,12 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            <Link href="/" className="flex items-center group">
+            <Link href="/" className="flex items-center group shrink-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={SITE_CONFIG.logo}
-                alt="Ryder Automotive"
-                className="h-10 w-auto object-contain group-hover:opacity-90 transition-opacity max-w-[180px]"
+                alt={SITE_CONFIG.name}
+                className="h-10 w-auto object-contain group-hover:opacity-90 transition-opacity max-w-[220px] min-w-[140px]"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                   const fallback = e.currentTarget.nextElementSibling;
@@ -136,8 +136,8 @@ export default function Navbar() {
                 }}
               />
               <span className="hidden flex-col leading-none" style={{ fontFamily: "var(--font-playfair)" }}>
-                <span className="text-2xl font-black text-white">RYDER</span>
-                <span className="text-[9px] tracking-[0.35em] text-gold-500 uppercase" style={{ fontFamily: "var(--font-oswald)" }}>Automotive</span>
+                <span className="text-2xl font-black text-white">{SITE_CONFIG.name.toUpperCase().split(" ").slice(0, 2).join(" ")}</span>
+                <span className="text-[9px] tracking-[0.35em] text-gold-500 uppercase" style={{ fontFamily: "var(--font-oswald)" }}>{SITE_CONFIG.name.split(" ").slice(2).join(" ") || "Motorcycles"}</span>
               </span>
             </Link>
 

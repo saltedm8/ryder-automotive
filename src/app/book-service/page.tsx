@@ -8,7 +8,7 @@ import { SITE_CONFIG, SERVICE_PRICES } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Book a Service",
-  description: "Book motorbike servicing at Ryder Automotive, Sittingbourne. Fixed-price menu servicing.",
+  description: `Book motorbike servicing at ${SITE_CONFIG.name}, Sittingbourne. Fixed-price menu servicing.`,
 };
 
 export default function BookServicePage() {

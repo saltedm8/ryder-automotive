@@ -11,14 +11,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <div>
-            <div className="mb-6">
-              <Link href="/">
+          <div className="min-w-[180px]">
+            <div className="mb-6 min-w-0 overflow-visible">
+              <Link href="/" className="inline-block">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={SITE_CONFIG.logo}
-                  alt="Ryder Automotive"
-                  className="h-12 w-auto object-contain max-w-[200px]"
+                  alt={SITE_CONFIG.name}
+                  className="h-12 w-auto object-contain max-w-[240px] min-w-[140px]"
                 />
               </Link>
             </div>
@@ -40,9 +40,9 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             {SITE_CONFIG.images.brandLogos?.KOVE && (
-              <div className="mb-6 flex items-center gap-3">
+              <div className="mb-6 flex items-center gap-3 min-w-0 overflow-visible">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={SITE_CONFIG.images.brandLogos.KOVE} alt="KOVE" className="h-10 w-auto object-contain" />
+                <img src={SITE_CONFIG.images.brandLogos.KOVE} alt="KOVE" className="h-10 w-auto object-contain shrink-0" />
                 <span className="text-gold-400 font-semibold uppercase tracking-wider text-sm" style={{ fontFamily: "var(--font-oswald)" }}>
                   KOVE Dealer
                 </span>
@@ -135,7 +135,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@ryderauto.co.uk"
+                  href={`mailto:${SITE_CONFIG.email}`}
                   className="flex items-start gap-3 text-charcoal-400 hover:text-gold-400 transition-colors group"
                 >
                   <Mail size={14} className="mt-1 shrink-0 text-gold-600 group-hover:text-gold-400" />
@@ -168,7 +168,7 @@ export default function Footer() {
       <div className="border-t border-charcoal-900 bg-black/30">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-charcoal-600">
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <span>© {new Date().getFullYear()} Ryder Automotive Ltd</span>
+            <span>© {new Date().getFullYear()} {SITE_CONFIG.name} Ltd</span>
             <span>Company No. {SITE_CONFIG.companyNo}</span>
             <span>FCA No. {SITE_CONFIG.fcaNo}</span>
           </div>
@@ -179,7 +179,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="text-center text-[10px] text-charcoal-700 pb-4 px-6">
-          Ryder Automotive Ltd T/A Ryder Motorcycles are a credit broker and not a lender. Authorised and Regulated by the Financial Conduct Authority. Finance is Subject to status. Registered in England & Wales: {SITE_CONFIG.companyNo}
+          {SITE_CONFIG.name} Ltd is a credit broker and not a lender. Authorised and Regulated by the Financial Conduct Authority. Finance is Subject to status. Registered in England & Wales: {SITE_CONFIG.companyNo}
         </p>
       </div>
     </footer>

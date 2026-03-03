@@ -9,7 +9,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "KOVE South East | KOVE Dealer",
   description:
-    "Ryder Motorcycles is the KOVE dealer for the South East of England, supplying Kent and East Sussex from our Sittingbourne showroom.",
+    `${SITE_CONFIG.name} is the KOVE dealer for the South East of England, supplying Kent and East Sussex from our Sittingbourne showroom.`,
 };
 
 export default function KoveSouthEastPage() {
@@ -18,7 +18,7 @@ export default function KoveSouthEastPage() {
       <PageHero
         subtitle="KOVE Dealer · Kent & East Sussex"
         title="KOVE South East"
-        description="Ryder Motorcycles is proud to be the KOVE dealer for the South East of England, supplying Kent and East Sussex from our showroom in Sittingbourne."
+        description={`${SITE_CONFIG.name} is proud to be the KOVE dealer for the South East of England, supplying Kent and East Sussex from our showroom in Sittingbourne.`}
         breadcrumbs={[{ label: "KOVE", href: "/kove" }, { label: "KOVE South East" }]}
         backgroundImage={(SITE_CONFIG.images as { koveBikePhotos?: string[] }).koveBikePhotos?.[1] ?? (SITE_CONFIG.images as { koveBikePhotos?: string[] }).koveBikePhotos?.[0] ?? SITE_CONFIG.images.hero}
       />
@@ -64,7 +64,7 @@ export default function KoveSouthEastPage() {
               <p className="text-charcoal-300 leading-relaxed mb-8">
                 This isn&apos;t about chasing trends. It&apos;s about focus on performance, durability, and rider
                 confidence — values that align perfectly with how we ride, sell, and support motorcycles
-                at Ryder Motorcycles.
+                at {SITE_CONFIG.name}.
               </p>
               <div className="flex gap-4">
                 <Link href="/new-bikes" className="btn-gold">
@@ -163,7 +163,7 @@ export default function KoveSouthEastPage() {
                 <div className="flex items-start gap-3 mb-4">
                   <MapPin size={18} className="text-gold-500 shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-white mb-1">Ryder Automotive</p>
+                    <p className="font-semibold text-white mb-1">{SITE_CONFIG.name}</p>
                     <p>{SITE_CONFIG.address.line1}</p>
                     <p>{SITE_CONFIG.address.line2}</p>
                     <p>{SITE_CONFIG.address.town}</p>
@@ -192,7 +192,7 @@ export default function KoveSouthEastPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ryder Automotive location"
+                  title={`${SITE_CONFIG.name} location`}
                   className="absolute inset-0 w-full h-full"
                 />
               </div>

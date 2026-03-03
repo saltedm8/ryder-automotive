@@ -297,7 +297,7 @@ export default function HomePage() {
               <span className="gold-shimmer">South East England</span>
             </h2>
             <p className="text-charcoal-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-10">
-              Ryder Motorcycles is the KOVE dealer for the South East — supplying Kent and East Sussex
+              {SITE_CONFIG.name} is the KOVE dealer for the South East — supplying Kent and East Sussex
               from our Sittingbourne showroom. New adventure and rally bikes in stock. Performance-driven
               machines built by riders for riders.
             </p>
@@ -416,14 +416,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="section-subtitle mb-4">About Ryder Automotive</p>
+              <p className="section-subtitle mb-4">About {SITE_CONFIG.name}</p>
               <h2 className="section-title mb-6">
                 It Was Probably<br />
                 <span className="gold-shimmer">Inevitable.</span>
               </h2>
               <div className="gold-divider" />
               <p className="text-charcoal-300 leading-relaxed mt-6 mb-4">
-                After 23 years in the automotive & fleet industry, Joe Ryder started Ryder Motorcycles
+                After 23 years in the automotive & fleet industry, James Mitchell started {SITE_CONFIG.name}
                 in December 2015. Growing up in a family with a haulage business, with a father who
                 raced motocross, a career with vehicles was always on the cards.
               </p>

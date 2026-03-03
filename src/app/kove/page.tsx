@@ -9,7 +9,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "KOVE Motorcycles | KOVE Dealer South East",
   description:
-    "Ryder Motorcycles is the KOVE dealer for the South East. New adventure and rally bikes in stock. Official dealer for Kent and East Sussex.",
+    `${SITE_CONFIG.name} is the KOVE dealer for the South East. New adventure and rally bikes in stock. Official dealer for Kent and East Sussex.`,
 };
 
 const koveBikePhotos = (SITE_CONFIG.images as { koveBikePhotos?: string[] }).koveBikePhotos || [SITE_CONFIG.images.kove];
@@ -88,7 +88,7 @@ export default function KoveHubPage() {
                 <img src={SITE_CONFIG.images.brandLogos.KOVE} alt="KOVE" className="h-16 md:h-20 w-auto object-contain" />
               </div>
             )}
-            <p className="section-subtitle mb-4">Ryder Motorcycles</p>
+            <p className="section-subtitle mb-4">{SITE_CONFIG.name}</p>
             <div className="gold-divider" />
             <h1
               className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none mt-6 mb-6"
@@ -99,7 +99,7 @@ export default function KoveHubPage() {
               <span className="gold-shimmer">Motorcycles</span>
             </h1>
             <p className="text-charcoal-300 text-lg leading-relaxed mb-10 max-w-lg">
-              Ryder Motorcycles is proud to be the KOVE dealer for the South East — supplying
+              {SITE_CONFIG.name} is proud to be the KOVE dealer for the South East — supplying
               Kent and East Sussex from our Sittingbourne showroom. Performance-driven adventure and
               rally bikes, built by riders for riders.
             </p>
@@ -116,11 +116,11 @@ export default function KoveHubPage() {
         </div>
       </section>
 
-      {/* Why KOVE at Ryder */}
+      {/* Why KOVE */}
       <section className="py-20 bg-charcoal-900 border-y border-charcoal-800">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="section-subtitle mb-3">Why Choose Ryder for KOVE</p>
+            <p className="section-subtitle mb-3">Why Choose Us for KOVE</p>
             <h2 className="section-title">Dealer Benefits</h2>
             <div className="gold-divider mx-auto" />
           </div>

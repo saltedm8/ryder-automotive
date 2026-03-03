@@ -67,7 +67,7 @@ export default function WorkshopBookingForm({ serviceType, title }: WorkshopBook
       </div>
       <div>
         <label className="block text-charcoal-400 text-sm mb-1">Phone *</label>
-        <input type="tel" name="phone" required className="input-dark" placeholder="01795 899204" />
+        <input type="tel" name="phone" required className="input-dark" placeholder={SITE_CONFIG.phone} />
       </div>
       <div>
         <label className="block text-charcoal-400 text-sm mb-1">Email *</label>

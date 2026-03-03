@@ -8,7 +8,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Delivery",
   description:
-    "Nationwide motorbike delivery from Ryder Automotive. UK mainland delivery. Competitive prices. We also collect bikes for part exchange and purchase.",
+    `Nationwide motorbike delivery from ${SITE_CONFIG.name}. UK mainland delivery. Competitive prices. We also collect bikes for part exchange and purchase.`,
 };
 
 export default function DeliveryPage() {

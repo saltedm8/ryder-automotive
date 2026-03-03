@@ -8,7 +8,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Part Exchange",
   description:
-    "Part exchange your motorbike at Ryder Automotive. Use your bike as deposit. Low and no deposit finance. Nationwide collection. We value all makes and models.",
+    `Part exchange your motorbike at ${SITE_CONFIG.name}. Use your bike as deposit. Low and no deposit finance. Nationwide collection. We value all makes and models.`,
 };
 
 export default function PartExchangePage() {

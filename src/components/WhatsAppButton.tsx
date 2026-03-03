@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/data";
 
 export default function WhatsAppButton() {
-  const whatsapp = (SITE_CONFIG as { whatsapp?: string }).whatsapp || "447959899204";
+  const whatsapp = (SITE_CONFIG as { whatsapp?: string }).whatsapp || "441634712345";
   const url = `https://wa.me/${whatsapp}`;
 
   return (

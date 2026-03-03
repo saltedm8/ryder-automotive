@@ -6,7 +6,7 @@ import { REVIEWS, SITE_CONFIG } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Reviews",
-  description: "Customer reviews for Ryder Automotive. See what our riders say about us.",
+  description: `Customer reviews for ${SITE_CONFIG.name}. See what our riders say about us.`,
 };
 
 export default function ReviewsPage() {

@@ -1,14 +1,14 @@
-// Site data - stock and content sourced from ryderauto.co.uk
+// Site data - placeholder/demo content
 
 export const SITE_CONFIG = {
-  name: "Ryder Automotive",
+  name: "Park Lane Motorcycles",
   tagline: "Where Passion Meets the Road",
-  phone: "01795 899204",
-  logo: "/images/logo/logo-left.png",
-  logoIcon: "/images/downthemall/logo.svg",
+  phone: "01634 712345",
+  logo: "/images/logo/placeholder.svg",
+  logoIcon: "/images/logo/placeholder.svg",
   images: {
-    logo: "/images/logo/logo-left.png",
-    logoIcon: "/images/downthemall/logo.svg",
+    logo: "/images/logo/placeholder.svg",
+    logoIcon: "/images/logo/placeholder.svg",
     hero: "/images/downthemall/about-first-2.jpg",
     heroSlides: [
       "https://kovemotouk.com/wp-content/uploads/2026/01/Ultra-Bee-5.jpg",
@@ -106,13 +106,13 @@ export const SITE_CONFIG = {
       "https://kovemotouk.com/wp-content/uploads/2026/01/Ultra-Bee-5.jpg", // KOVE 800X Pro
     ],
   },
-  email: "info@ryderauto.co.uk",
+  email: "enquiries@parklanemotorcycles.co.uk",
   address: {
-    line1: "Unit 12, D2 Trading Estate",
-    line2: "Castle Road, Eurolink",
+    line1: "14 Industrial Way",
+    line2: "Milton Regis",
     town: "Sittingbourne",
     county: "Kent",
-    postcode: "ME10 3RH",
+    postcode: "ME9 8PH",
   },
   hours: [
     { day: "Monday", hours: "Closed" },
@@ -123,17 +123,17 @@ export const SITE_CONFIG = {
     { day: "Saturday", hours: "09:00 – 17:00" },
     { day: "Sunday", hours: "Closed" },
   ],
-  companyNo: "9918578",
-  fcaNo: "729539",
-  facebook: "https://www.facebook.com/FuelingYourFreedom",
-  coords: { lat: 51.349036, lng: 0.753479 },
+  companyNo: "12345678",
+  fcaNo: "987654",
+  facebook: "https://www.facebook.com",
+  coords: { lat: 51.3389, lng: 0.7389 },
   /** WhatsApp - UK format (44 + number without leading 0). Add to env: NEXT_PUBLIC_WHATSAPP */
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "447959899204",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "441634712345",
   /** Formspree endpoint for form submissions. Create at formspree.io, add to .env: NEXT_PUBLIC_FORMSPREE_ENDPOINT */
   formEndpoint: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "",
-  /** Previously sold archive - full list at ryderauto.co.uk/gallery.php */
-  previouslySoldArchiveUrl: "https://www.ryderauto.co.uk/gallery.php",
-  /** KOVE videos - add Ryder/Click Dealer video URLs from ryderauto.co.uk when available */
+  /** Previously sold archive */
+  previouslySoldArchiveUrl: "",
+  /** KOVE videos */
   koveVideos: [
     { id: "3lBTPeak8Fg", title: "KOVE 800X Pro Review", source: "youtube" },
     { id: "Z0ACWLg9aRc", title: "2025 KOVE 800X Review", source: "youtube" },
@@ -494,7 +494,7 @@ const SOLD_IMAGES = [
   "/images/sold/174521886.jpg", "/images/sold/174530161.jpg", "/images/sold/174533730.jpg", "/images/sold/174574764.jpg", "/images/sold/174581448.jpg",
 ];
 
-/** Sample of previously sold bikes - full archive (2238+) at ryderauto.co.uk/gallery.php */
+/** Sample of previously sold bikes */
 export const PREVIOUSLY_SOLD = [
   { year: "2024", make: "Harley-Davidson", model: "Pan America SPECIAL", image: SOLD_IMAGES[0] },
   { year: "2023", make: "Ducati", model: "Monster 937", image: SOLD_IMAGES[1] },
@@ -548,7 +548,7 @@ export const REVIEWS = [
   {
     author: "Ian Cogger",
     rating: 5,
-    text: "Fantastic service from this family run business. I purchased a beautiful Triumph Thruxton from them and it has been a dream — no problems. Whenever it comes to trade it in, Ryders will be my first point of call.",
+    text: "Fantastic service from this family run business. I purchased a beautiful Triumph Thruxton from them and it has been a dream — no problems. Whenever it comes to trade it in, they will be my first point of call.",
   },
   {
     author: "Gary Lloyd",

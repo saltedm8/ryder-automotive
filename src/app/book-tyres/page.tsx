@@ -8,7 +8,7 @@ import { SITE_CONFIG, SERVICE_PRICES } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Book Tyres",
-  description: "Book motorbike tyres at Ryder Automotive. Michelin, Bridgestone, Continental in stock.",
+  description: `Book motorbike tyres at ${SITE_CONFIG.name}. Michelin, Bridgestone, Continental in stock.`,
 };
 
 export default function BookTyresPage() {

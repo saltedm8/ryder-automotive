@@ -52,8 +52,8 @@ const links = [
   {
     section: "External",
     items: [
-      { label: "Helmets & Gear", href: "https://rydermotorcycles.co.uk/", external: true },
-      { label: "Web Shop", href: "https://ryder-automotive.myshopify.com/", external: true },
+      { label: "Helmets & Gear", href: "#", external: true },
+      { label: "Web Shop", href: "#", external: true },
     ],
   },
   {

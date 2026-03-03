@@ -8,7 +8,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "New KOVE Bikes",
   description:
-    "New KOVE motorcycles from the South East KOVE dealer. Rally, adventure and enduro bikes in stock and available to order. Ryder Motorcycles — KOVE dealer.",
+    `New KOVE motorcycles from the South East KOVE dealer. Rally, adventure and enduro bikes in stock and available to order. ${SITE_CONFIG.name} — KOVE dealer.`,
 };
 
 const koveBikePhotos = (SITE_CONFIG.images as { koveBikePhotos?: string[] }).koveBikePhotos ?? [];
@@ -54,7 +54,7 @@ export default function NewBikesPage() {
       <PageHero
         subtitle="KOVE Dealer · South East England"
         title="New KOVE Bikes"
-        description="Ryder Motorcycles is the KOVE dealer for the South East of England. Performance-driven adventure and rally machines, available in our Sittingbourne showroom."
+        description={`${SITE_CONFIG.name} is the KOVE dealer for the South East of England. Performance-driven adventure and rally machines, available in our Sittingbourne showroom.`}
         breadcrumbs={[{ label: "KOVE", href: "/kove" }, { label: "New KOVE Stock" }]}
         backgroundImage={(SITE_CONFIG.images as { koveHero?: string }).koveHero ?? koveBikePhotos[3] ?? koveBikePhotos[1] ?? koveBikePhotos[0] ?? SITE_CONFIG.images.hero}
         overlay="light"
@@ -95,7 +95,7 @@ export default function NewBikesPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded">
                 <Image
                   src={SITE_CONFIG.images.kove}
-                  alt="Ryder Motorcycles KOVE showroom"
+                  alt={`${SITE_CONFIG.name} KOVE showroom`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

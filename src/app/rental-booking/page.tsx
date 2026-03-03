@@ -8,7 +8,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Rental Booking",
   description:
-    "Book motorcycle rental at Ryder Automotive, Sittingbourne. Daily and weekly rates. Adventure bikes, touring, sport. Contact us for availability and pricing.",
+    `Book motorcycle rental at ${SITE_CONFIG.name}, Sittingbourne. Daily and weekly rates. Adventure bikes, touring, sport. Contact us for availability and pricing.`,
 };
 
 export default function RentalBookingPage() {
@@ -31,7 +31,7 @@ export default function RentalBookingPage() {
             <div className="space-y-6 text-charcoal-300 leading-relaxed">
               <h2 className="section-title text-2xl">Hire a Motorcycle</h2>
               <p>
-                Whether you&apos;re trying before you buy, need a bike for a weekend tour, or want to experience a different machine — Ryder Automotive offers motorcycle rental for short and longer periods. We have a range of bikes available, including adventure and touring models.
+                Whether you&apos;re trying before you buy, need a bike for a weekend tour, or want to experience a different machine — {SITE_CONFIG.name} offers motorcycle rental for short and longer periods. We have a range of bikes available, including adventure and touring models.
               </p>
               <p>
                 Our rental fleet is maintained to the same standards as our showroom stock. All bikes are fully serviced, insured and ready to ride. We&apos;re based in Sittingbourne, Kent — ideal for exploring Kent, East Sussex and the South East.

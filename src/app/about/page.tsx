@@ -8,7 +8,7 @@ import { SITE_CONFIG } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Ryder Automotive - family-run motorcycle dealer in Sittingbourne since 2015. Honesty, trust and respect.",
+    `${SITE_CONFIG.name} - family-run motorcycle dealer in Sittingbourne since 2015. Honesty, trust and respect.`,
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
     <>
       <PageHero
         subtitle="Our Story"
-        title="Ryder Automotive"
+        title={SITE_CONFIG.name}
         breadcrumbs={[{ label: "About Us" }]}
         backgroundImage={(SITE_CONFIG.images as { about?: string[] }).about?.[0] ?? SITE_CONFIG.images.classic}
       />
@@ -33,7 +33,7 @@ export default function AboutPage() {
           <div className="gold-divider mb-8" />
           <div className="text-charcoal-300 space-y-6 leading-relaxed">
             <p>
-              After 23 years in the automotive & fleet industry, I started Ryder Motorcycles in December 2015.
+              After 23 years in the automotive & fleet industry, I started {SITE_CONFIG.name} in December 2015.
             </p>
             <p>
               Growing up in a family with a haulage business, with a father who raced motocross, a career with vehicles was probably inevitable.
@@ -51,7 +51,7 @@ export default function AboutPage() {
               If you find one of the rare moments when we&apos;re not at work, you&apos;ll probably find us &quot;testing&quot; the goods, whether on track or tour.
             </p>
             <p className="text-gold-400 font-semibold" style={{ fontFamily: "var(--font-playfair)" }}>
-              Joe Ryder
+              James Mitchell
             </p>
           </div>
           <div className="mt-12 pt-10 border-t border-charcoal-800">
