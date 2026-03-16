@@ -13,6 +13,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: {
     default: `${SITE_CONFIG.name} | Used Motorbikes for Sale in Sittingbourne, Kent`,
     template: `%s | ${SITE_CONFIG.name}`,
@@ -42,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="robots" content="noindex, nofollow" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
