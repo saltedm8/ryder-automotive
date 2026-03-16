@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import DemoBanner from "@/components/DemoBanner";
 import { SITE_CONFIG } from "@/lib/data";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -45,6 +46,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen flex flex-col">
+        <DemoBanner />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
